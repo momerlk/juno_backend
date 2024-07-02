@@ -85,8 +85,11 @@ def update_product_if_exists(product):
     if existing_product:
         # Update the existing product
         product["product_id"] = existing_product["product_id"]
-        collection.update_one({'shopify_id': shopify_id}, {'$set': product})
-        return True
+        res = collection.update_one({'shopify_id': shopify_id}, {'$set': product})
+        if res.matched_count > 0 and res.modified_count > 0:
+            return True  # Product was updated
+        else:
+            return False  # Product was not updated or did not exist
     else:
         # Product does not exist, do nothing
         return False
