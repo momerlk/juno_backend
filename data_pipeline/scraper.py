@@ -27,7 +27,7 @@ import math
 
 local_db_server = "mongodb://localhost:27017/"
 online_db_server = 'mongodb+srv://swift:swift@hobby.nzyzrid.mongodb.net/'
-MONGO_URI = online_db_server
+MONGO_URI = local_db_server
 DATABASE_NAME = 'juno'
 COLLECTION_NAME = 'products'
 
@@ -79,19 +79,17 @@ def update_product_if_exists(product):
         return False
 
     # Check if a product with the given Shopify ID exists
-    existing_product = collection.find_one({'shopify_id': shopify_id})
-    product["product_id"] = existing_product["product_id"]
+    existing_product = collection.find_one({'shopify_id': shopify_id}) 
 
     if existing_product:
         # Update the existing product
+        product["product_id"] = existing_product["product_id"]
         collection.update_one({'shopify_id': shopify_id}, {'$set': product})
         return True
     else:
         # Product does not exist, do nothing
         return False
 
-# TODO : Add discounts which are compare_at_price in shopify data
-# TODO : Different price for each variant display price should be closest price to Rs.1000
 
 def get_page(base_url , url , handle , page , upload=True):
     data = urlopen(url + '?page={}'.format(page)).read()
@@ -158,7 +156,6 @@ def extract_fields(base_url , handle , json_data):
         return None
 
     try : 
-        # TODO : change preprocess to just remove html tags. 
         description = preprocess_text(description)
     except Exception as e : 
         print(f"failed to preprocess description, error = {e}, description = {description}")
@@ -173,11 +170,22 @@ def extract_fields(base_url , handle , json_data):
             return ""
         else : 
             return val
+    def price_fmt(price):
+        if price == None : 
+            return -1
+        return int(price.split(".")[0])
 
     variants = []
+    distance = 900000000000
+
+    compare_price_vt = -1
     
     for idx, variant in enumerate(json_data.get("variants")) : 
         first_dig = variant["price"].split(".")[0][0]
+
+        price = price_fmt(variant["price"])
+        compare_price = price_fmt(variant["compare_at_price"])
+
         if first_dig == "0" : 
             return None
         available = variant["available"]
@@ -185,30 +193,30 @@ def extract_fields(base_url , handle , json_data):
             continue 
         
         if available == True : 
+            this_distance = abs(1000 - price)
+            if this_distance < distance : 
+                distance = this_distance
+                variant_index = idx
+                compare_price_vt = compare_price
             product_available = True
         
         variants.append({
             "id" : f"{variant["id"]}",
             "price" : variant["price"],
             "title" : variant["title"],
-            "price" : int(variant["price"]),
-            "compare_price" : int(variant["compare_at_price"]),
+            "price" : price,
+            "compare_price" :compare_price,
             "option1" : null_to_str(variant["option1"]),
             "option2" : null_to_str(variant["option2"]),
             "option3" : null_to_str(variant["option3"]),
         })
-
-        
-
-    
 
 
     variant = json_data.get("variants")[variant_index] 
 
     url = f"{base_url}/products/{json_data.get("handle")}"
     vendor = handle
-    price = variant["price"]
-    compare_price = variant["compare_at_price"]
+    price = price_fmt(variant["price"])
     images = json_data.get("images")
     if len(images) == 0 : 
         return None 
@@ -217,6 +225,12 @@ def extract_fields(base_url , handle , json_data):
     image_urls = []
     for image in images : 
         image_urls.append(image["src"])
+
+    discount = 0
+    if compare_price_vt != -1 : 
+        res = round((compare_price_vt/price)-1, 1)
+        if res > 0 :
+            discount = res * 100
 
     product =  {
         'product_id': str(uuid.uuid4()),
@@ -234,8 +248,9 @@ def extract_fields(base_url , handle , json_data):
         "images" : image_urls,
         "description" : description, 
 
-        "price" : int(price),
-        "compare_price" : int(compare_price),
+        "price" : price,
+        "compare_price" : compare_price_vt,
+        "discount" : discount,
         "currency" : "PKR",
 
         "variants" : variants,
