@@ -228,8 +228,8 @@ def extract_fields(base_url , handle , json_data):
         image_urls.append(image["src"])
 
     discount = 0
-    if compare_price_vt != -1 : 
-        res = (compare_price_vt/price)-1
+    if compare_price_vt != -1 and compare_price_vt != 0 and price != 0: 
+        res = 1-(price/compare_price_vt)
         if res < 0.1 and res > 0: 
             res = 0.1
         if res > 0 :
