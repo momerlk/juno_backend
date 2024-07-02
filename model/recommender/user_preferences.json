@@ -1,0 +1,67 @@
+{
+    "_id": {
+      "$oid": "665a161d2bda72febe9c6262"
+    },
+    "user_id": "96e93c9b-8252-4639-bd0e-9d6f166dcc84",
+    "user_ethnicity": [
+        "Pakistani",
+        "Indian",
+        "Middle-Eastern",
+        "Western"
+    ],
+    "user_demographics": [
+        "Lahore",
+        "Karachi",
+        "Islamabad",
+        "Peshawar"
+    ],
+    "language": "Urdu",
+    "Occupation": "Occupied",
+    "Income Level": "Rs.50000",
+    "Search-History": [
+        {
+            "query": "test",
+            "time-stamp": "3",
+            "category": "Accessories"
+        }
+    ],
+    "Ratings-History": [
+        {
+            "rating": "0.96",
+            "Product_data": "product_data"
+        }
+    ],
+    "favourite_product_category": "Bridal Wear",
+    "shopping_behaviour": {
+        "shopping frequency": "10 products per month",
+        "money_spent_per_month": "Rs. 10000",
+        "Average_product_price_for_purchase": "Rs. 3000",
+        "Most_frequent_category_clothes": "Bridal",
+        "user_buying trends": {
+            "User_activity": "Month",
+            "Duration_between_purchase": "40 days"
+        }
+    },
+    "most_active_time": "23:00",
+    "session_intent": {
+        "frequency_likes": "12",
+        "frequency_dislikes": "1",
+        "occasion": "Wedding",
+        "Category": ["Shoes", "Clothes", "Accessories"]
+    },
+    "num_bought_occasion": [
+        {
+            "occasion": "Wedding",
+            "Category": "Clothes",
+            "number_of_products": "5"
+        }
+    ],
+    "time_user": {
+        "averagetime_product": "23 seconds",
+        "averagetime_day": "3 hours",
+        "totaltime_week": "10 hours",
+        "totaltime_overall": "14 hours",
+        "most_active_day": "Monday",
+        "least_active_day": "Sunday"
+    }
+  }

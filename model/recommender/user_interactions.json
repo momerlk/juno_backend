@@ -1,0 +1,43 @@
+[{
+  "user1" : {
+    "_id": {
+      "$oid": "665a161d2bda72febe9c6262"
+    },
+    "user_id": "96e93c9b-8252-4639-bd0e-9d6f166dcc84",
+    "action_id": "79287c80-55f6-4708-8b91-bd60082ce5a1",
+    "action_type": [
+        "Liked",
+        "Disliked",
+        "Added_to_Cart",
+        "Image_viewed_with_Interest",
+        "Purchase",
+        "Checkout",
+        "Clicks",
+        "Read more",
+        "share",
+        "Check Website",
+        "View Related Products",
+        "Filter_click",
+        "App Quit" 
+    ],
+    "num_pics_scrolled": "60%",
+    
+    "action_duration": [
+        "> 10 seconds",
+        "> 25 seconds",
+        "> 40 seconds",
+        "> 60 seconds"
+    ],
+    "time_spent_compared_to_average": "56%",
+    "action_timestamp": {
+      "Season": "2",
+      "Month": "1",
+      "Day": "0",
+      "Hours": "2",
+      "Minutes": "200",
+      "TimeZone": "+5"
+    },
+    "product_id": "338d0a23-a569-4d0f-87cd-61211b19013f",
+    "__v": 0
+  }
+}]

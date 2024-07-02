@@ -1,0 +1,91 @@
+[{
+    "_id": {
+      "$oid": "665d5751c3b209541996765e"
+    },
+    "product_id": "027bb7aa-d705-4544-8ff4-8f4ce91c2bec",
+    "shopify_id": {
+      "$numberLong": "8002372829418"
+    },
+    "vendor": "afrozeh",
+    "vendor_title": "Afrozeh",
+    "currency": "PKR",
+    "available": true,
+    "meta_tags": {
+      "categories": [
+        "Embroidered",
+        "Net",
+        "Raw Silk",
+        "Dupatta",
+        "Dress",
+        "Women's Clothing"
+      ],
+      "type": [
+        "Stitched", 
+        "Unstitched"
+      ],
+      "garment_type": "Dress",
+      "fabric": [
+        "Net", 
+        "Raw Silk"
+      ],
+      "Tradition": [
+        "Punjabi",
+        "Sindhi",
+        "Pashto",
+        "Balochi",
+        "Kashmiri",
+        "Western",
+        "South Asian",
+        "Fusion"
+      ],
+      "Style": [
+        "Bohemian",
+        "Formal",
+        "casual",
+        "Embroided"
+      ],
+      "color": "Red",
+      "Occasion": "Wedding",
+      "Size": "Small",
+      "Season": "Summer",
+      "Patterns": "Henna",
+      "keywords": [
+        "Mahjabeen",
+        "Embroidered Dress",
+        "Printed Dress",
+        "Net Dress",
+        "Pakistani Dress",
+        "Formal Wear",
+        "Bridal Wear",
+        "Traditional Dress"
+      ]
+    },
+    "Products-Metrics": {
+        "Trending": "True or False",
+        "Discount": "10% off",
+        "Product_timezone": "GMT +5",
+        "Interest-Rating": "0.5"
+      },
+    "audience": {
+      "most_viewed_by_cluster": "k12",
+      "age_range": "Adult",
+      "gender": "Female",  
+      "interests": [
+        "Fashion",
+        "Clothing",
+        "Bridal",
+        "Pakistani Culture",
+        "South Asian Fashion",
+        "Western Fashion",
+        "Middle Eastern Fashion",
+        "European Fashion"
+      ],
+      "price_range": [
+        "Low",
+        "Medium",
+        "High"
+      ],
+      "user_type": "Fashion Enthusiast"
+    }
+    
+  }]

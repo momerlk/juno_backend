@@ -1,0 +1,29 @@
+[{
+  "_id": {
+    "$oid": "6656e8ab5443f6ea7c63dc1f"
+  },
+  "user_id": "96e93c9b-8252-4639-bd0e-9d6f166dcc84",
+  "email": "omeralimalik96@gmail.com",
+  "password": "$2b$10$9ppZmwA0DvPUocYn5h0GbOkFf61.EHSIu6fqzhbzh0d.jp/uBx6KG",
+  "phone_number": "+92 300 0856955"
+},
+{
+  "_id": {
+    "$oid": "665755bac26a9f04c09755b9"
+  },
+  "user_id": "b5134fab-9427-48d6-b0c3-32a0795129d1",
+  "email": "farhatali151@yahoo.com",
+  "password": "$2b$10$zQtte1u9KDR5zQNXaPU9n.q8EP8p8AvknFI//KjrVDWfgnnOzUXdq",
+  "phone_number": "+92 3458222711",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6657957f6661e28b8fddd8c9"
+  },
+  "user_id": "aa1855a3-1e54-4f53-befc-153fd262ca0a",
+  "email": "fatima@gmail.com",
+  "password": "$2b$10$9IK73tRU1gb3gjXfbnJIa.RCYaaljsRkAvfhaGiEiHoWOsPjE3xeu",
+  "phone_number": "+92 3008459421",
+  "__v": 0
+}]

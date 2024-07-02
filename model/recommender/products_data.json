@@ -1,0 +1,116 @@
+[{
+  "_id": {
+    "$oid": "665d5751c3b209541996765e"
+  },
+  "product_id": "027bb7aa-d705-4544-8ff4-8f4ce91c2bec",
+  "product_type": "womens_clothing",
+  "category": "clothes",
+  "product_url": "https://www.afrozeh.com/products/mahjabeen-1",
+  "image_url": "https://cdn.shopify.com/s/files/1/0052/2030/2897/products/5.jpg?v=1668433218",
+  "options": {
+    "Type": "Unstitched,Stitched"
+  },
+  "shopify_id": {
+    "$numberLong": "8002372829418"
+  },
+  "handle": "mahjabeen-1",
+  "title": "Mahjabeen 22",
+  "vendor": "afrozeh",
+  "vendor_title": "Afrozeh",
+  "description": "This stunning Mahjabeen 22 dress features intricate net embellishments and embroidery on the front and back body, panels, sleeves, and dupatta.  The dress comes with raw silk embroidered sleeves and front/back borders, adding a touch of elegance. The dupatta is also adorned with net embroidery and a 4-sided border.  Choose between unstitched and stitched options to create your perfect look. ",
+  "price": "29900",
+  "currency": "PKR",
+  "available": true,
+  "meta_tags": {
+    "categories": [
+      "Embroidered",
+      "Net",
+      "Raw Silk",
+      "Dupatta",
+      "Dress",
+      "Women's Clothing"
+    ],
+    "type": [
+      "Stitched",
+      "Unstitched"
+    ],
+    "garment_type": "Dress",
+    "fabric": [
+      "Net", 
+      "Raw Silk"
+    ],
+    "Tradition": [
+      "Punjabi",
+      "Sindhi",
+      "Pashto",
+      "Balochi",
+      "Kashmiri",
+      "Western",
+      "South Asian",
+      "Fusion"
+    ],
+    "Style": [
+      "Bohemian",
+      "Formal",
+      "casual",
+      "Embroided"
+    ],
+    "color": "Red",
+    "Occasion": "Wedding",
+    "Size": "Small",
+    "Season": "Summer",
+    "Patterns": "Henna",
+    "keywords": [
+      "Mahjabeen",
+      "Embroidered Dress",
+      "Printed Dress",
+      "Net Dress",
+      "Pakistani Dress",
+      "Formal Wear",
+      "Bridal Wear",
+      "Traditional Dress"
+    ]
+  },
+  "Products-Metrics": {
+      "Related_products_popularity": "40%",
+      "most_purchases_demographics": "Lahore",
+      "max_impressions_perhour": "1200",
+      "Trending": "True or False",
+      "individual_product_searches": "12000",
+      "abandonment_rate": "4%",
+      "num_shares": "600",
+      "num_sold_season": {},
+      "Freshness": "10 days ago",
+      "Discount": "10% off",
+      "Product_timezone": "GMT +5",
+      "Interest-Rating": "0.5",
+      "Average_time_viewed": "24.6 seconds",
+      "impressions": "5000",
+      "Num_likes": "3000",
+      "Num_dislikes": "1500",
+      "Num_add_to_carts": "4000",
+      "Purchases": "4500"
+    },
+  "audience": {
+    "most_viewed_by_cluster": "k12",
+    "age_range": "Adult",
+    "gender": "Female",  
+    "interests": [
+      "Fashion",
+      "Clothing",
+      "Bridal",
+      "Pakistani Culture",
+      "South Asian Fashion",
+      "Western Fashion",
+      "Middle Eastern Fashion",
+      "European Fashion"
+    ],
+    "price_range": [
+      "Low",
+      "Medium",
+      "High"
+    ],
+    "user_type": "Fashion Enthusiast"
+  }
+  
+}]
