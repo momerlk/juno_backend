@@ -15,6 +15,7 @@ from nltk.stem import WordNetLemmatizer
 from bs4 import BeautifulSoup
 import uuid
 import pprint
+import math
 
 # TODO : Khaadi, Bareeze, Junaid Jamshed, Gul Ahmed
 
@@ -38,36 +39,56 @@ db = client[DATABASE_NAME]
 collection = db[COLLECTION_NAME]
 
 brands = [
-    # {"name" : "afrozeh" , "base_url" : "https://www.afrozeh.com"},
-    # {"name" : "ali_xeeshan" , "base_url" :  "https://alixeeshanempire.com"},
-    # {"name" : "alkaram_studio" , "base_url" :  "https://www.alkaramstudio.com"},
-    # {"name" : "asim_jofa" , "base_url" :  "https://asimjofa.com"},
-    # {"name" : "beechtree" , "base_url" :  "https://beechtree.pk"},
-    # {"name" : "bonanza_satrangi" , "base_url" :  "https://bonanzasatrangi.com"},
-    # {"name" : "chinyere" , "base_url" :  "https://chinyere.pk"},
-    # {"name" : "cross_stitch" , "base_url" :  "https://www.crossstitch.pk"},
-    # {"name" : "edenrobe" , "base_url" :  "https://edenrobe.com"},
-    # {"name" : "ethnic" , "base_url" :  "https://pk.ethnc.com"},
-    # {"name" : "faiza_saqlain" , "base_url" :  "https://www.faizasaqlain.pk"},
-    # {"name" : "generation" , "base_url" :  "https://generation.com.pk"},
-    # {"name" : "hem_stitch" , "base_url" :  "https://www.hemstitch.pk"},
-    # {"name" : "hussain_rehar" , "base_url" :  "https://www.hussainrehar.com"},
-    # {"name" : "kanwal_malik" , "base_url" :  "https://www.kanwalmalik.com"},
-    # {"name" : "kayseria" , "base_url" :  "https://www.kayseria.com"},
-    # {"name" : "limelight" , "base_url" :  "https://www.limelight.pk"},
-    # {"name" : "maria_b" , "base_url" :  "https://www.mariab.pk"},
-    # {"name" : "mushq" , "base_url" :  "https://www.mushq.pk"},
-    # {"name" : "nishat_linen" , "base_url" :  "https://nishatlinen.com"},
-    # {"name" : "sadaf_fawad_khan" , "base_url" :  "https://sadaffawadkhan.com"},
-    # {"name" : "sapphire" , "base_url" :  "https://pk.sapphireonline.pk"},
-    # {"name" : "zaha" , "base_url" :  "https://www.zaha.pk"},
-    # {"name" : "zara_shah_jahan" , "base_url" :  "https://zarashahjahan.com"},
-    # {"name" : "zellbury" , "base_url" :  "https://zellbury.com"},
-    # {"name" : "outfitters" , "base_url" : "https://outfitters.com.pk/"},
-    # {"label" : "Breakout" , "name" : "breakout" , "base_url" : "https://breakout.com.pk/"},
+    {"name" : "afrozeh" , "base_url" : "https://www.afrozeh.com"},
+    {"name" : "ali_xeeshan" , "base_url" :  "https://alixeeshanempire.com"},
+    {"name" : "alkaram_studio" , "base_url" :  "https://www.alkaramstudio.com"},
+    {"name" : "asim_jofa" , "base_url" :  "https://asimjofa.com"},
+    {"name" : "beechtree" , "base_url" :  "https://beechtree.pk"},
+    {"name" : "bonanza_satrangi" , "base_url" :  "https://bonanzasatrangi.com"},
+    {"name" : "chinyere" , "base_url" :  "https://chinyere.pk"},
+    {"name" : "cross_stitch" , "base_url" :  "https://www.crossstitch.pk"},
+    {"name" : "edenrobe" , "base_url" :  "https://edenrobe.com"},
+    {"name" : "ethnic" , "base_url" :  "https://pk.ethnc.com"},
+    {"name" : "faiza_saqlain" , "base_url" :  "https://www.faizasaqlain.pk"},
+    {"name" : "generation" , "base_url" :  "https://generation.com.pk"},
+    {"name" : "hem_stitch" , "base_url" :  "https://www.hemstitch.pk"},
+    {"name" : "hussain_rehar" , "base_url" :  "https://www.hussainrehar.com"},
+    {"name" : "kanwal_malik" , "base_url" :  "https://www.kanwalmalik.com"},
+    {"name" : "kayseria" , "base_url" :  "https://www.kayseria.com"},
+    {"name" : "limelight" , "base_url" :  "https://www.limelight.pk"},
+    {"name" : "maria_b" , "base_url" :  "https://www.mariab.pk"},
+    {"name" : "mushq" , "base_url" :  "https://www.mushq.pk"},
+    {"name" : "nishat_linen" , "base_url" :  "https://nishatlinen.com"},
+    {"name" : "sadaf_fawad_khan" , "base_url" :  "https://sadaffawadkhan.com"},
+    {"name" : "sapphire" , "base_url" :  "https://pk.sapphireonline.pk"},
+    {"name" : "zaha" , "base_url" :  "https://www.zaha.pk"},
+    {"name" : "zara_shah_jahan" , "base_url" :  "https://zarashahjahan.com"},
+    {"name" : "zellbury" , "base_url" :  "https://zellbury.com"},
+    {"name" : "outfitters" , "base_url" : "https://outfitters.com.pk/"},
+    {"label" : "Breakout" , "name" : "breakout" , "base_url" : "https://breakout.com.pk/"},
     {"label" : "Breakout" , "name" : "breakout" , "base_url" : "https://breakout.com.pk/"},
 
 ]
+
+def update_product_if_exists(product):
+    # Extract the Shopify ID from the product
+    shopify_id = product.get('shopify_id')
+
+    if not shopify_id:
+        print("Product does not have a Shopify ID.")
+        return False
+
+    # Check if a product with the given Shopify ID exists
+    existing_product = collection.find_one({'shopify_id': shopify_id})
+    product["product_id"] = existing_product["product_id"]
+
+    if existing_product:
+        # Update the existing product
+        collection.update_one({'shopify_id': shopify_id}, {'$set': product})
+        return True
+    else:
+        # Product does not exist, do nothing
+        return False
 
 # TODO : Add discounts which are compare_at_price in shopify data
 # TODO : Different price for each variant display price should be closest price to Rs.1000
@@ -154,6 +175,7 @@ def extract_fields(base_url , handle , json_data):
             return val
 
     variants = []
+    
     for idx, variant in enumerate(json_data.get("variants")) : 
         first_dig = variant["price"].split(".")[0][0]
         if first_dig == "0" : 
@@ -168,6 +190,9 @@ def extract_fields(base_url , handle , json_data):
         variants.append({
             "id" : f"{variant["id"]}",
             "price" : variant["price"],
+            "title" : variant["title"],
+            "price" : int(variant["price"]),
+            "compare_price" : int(variant["compare_at_price"]),
             "option1" : null_to_str(variant["option1"]),
             "option2" : null_to_str(variant["option2"]),
             "option3" : null_to_str(variant["option3"]),
@@ -175,15 +200,15 @@ def extract_fields(base_url , handle , json_data):
 
         
 
-    if product_available == False : 
-        return None
+    
 
 
     variant = json_data.get("variants")[variant_index] 
 
     url = f"{base_url}/products/{json_data.get("handle")}"
     vendor = handle
-    price = variant["price"].split(".")[0]
+    price = variant["price"]
+    compare_price = variant["compare_at_price"]
     images = json_data.get("images")
     if len(images) == 0 : 
         return None 
@@ -210,19 +235,29 @@ def extract_fields(base_url , handle , json_data):
         "description" : description, 
 
         "price" : int(price),
+        "compare_price" : int(compare_price),
         "currency" : "PKR",
 
         "variants" : variants,
         "options" : json_data.get("options"),
         "tags" : json_data.get("tags"),
-        "available" : True,
+        "available" : product_available,
     }
+    
+
+    # if exists just update
+    exists = update_product_if_exists(product)
+    if exists == True : 
+        return None
 
     # Pretty print the dictionary
     # pretty_product = pprint.pformat(product)
     # print(pretty_product)
 
-
+    # if product not available just update it
+    if product_available == False : 
+        
+        return None
 
     return product
 
