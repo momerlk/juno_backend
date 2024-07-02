@@ -66,9 +66,10 @@ brands = [
     {"name" : "zellbury" , "base_url" :  "https://zellbury.com"},
     {"name" : "outfitters" , "base_url" : "https://outfitters.com.pk/"},
     {"label" : "Breakout" , "name" : "breakout" , "base_url" : "https://breakout.com.pk/"},
-    {"label" : "Breakout" , "name" : "breakout" , "base_url" : "https://breakout.com.pk/"},
 
 ]
+
+print("total brands =" , len(brands))
 
 def update_product_if_exists(product):
     # Extract the Shopify ID from the product
@@ -122,7 +123,7 @@ def scrape_brand(details : dict):
         products = get_page(base_url,url,handle,page)
         arr = np.append(arr , products)
 
-    print(f"total products scraped = {len(arr)}")
+    print(f"total new products scraped = {len(arr)}, from {details["name"]}")
 
     return products
 
@@ -228,9 +229,11 @@ def extract_fields(base_url , handle , json_data):
 
     discount = 0
     if compare_price_vt != -1 : 
-        res = round((compare_price_vt/price)-1, 1)
+        res = (compare_price_vt/price)-1
+        if res < 0.1 and res > 0: 
+            res = 0.1
         if res > 0 :
-            discount = res * 100
+            discount = int(res * 100)
 
     product =  {
         'product_id': str(uuid.uuid4()),
@@ -271,7 +274,6 @@ def extract_fields(base_url , handle , json_data):
 
     # if product not available just update it
     if product_available == False : 
-        
         return None
 
     return product
