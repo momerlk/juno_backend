@@ -64,9 +64,25 @@ brands = [
     {"name" : "zaha" , "base_url" :  "https://www.zaha.pk"},
     {"name" : "zara_shah_jahan" , "base_url" :  "https://zarashahjahan.com"},
     {"name" : "zellbury" , "base_url" :  "https://zellbury.com"},
-    {"name" : "outfitters" , "base_url" : "https://outfitters.com.pk/"},
-    {"label" : "Breakout" , "name" : "breakout" , "base_url" : "https://breakout.com.pk/"},
-
+    {"name" : "outfitters" , "base_url" : "https://outfitters.com.pk"},
+    {"name" : "breakout" , "base_url" : "https://breakout.com.pk"},
+    {"name" : "azure" , "base_url" : "https://www.azureofficial.pk"},
+    {"name" : "almirah" , "base_url" : "https://almirah.com.pk"},
+    {"name" : "saya" , "base_url" : "https://saya.pk"},
+    {"name" : "senorita" , "base_url" : "https://senorita.pk"},
+    {"name" : "zeen" , "base_url" : "https://zeenwoman.com"},
+    {"name" : "mahum_asad" , "base_url" : "https://mahumasad.com"},
+    {"name" : "mohagni" , "base_url" : "https://mohagni.com"},
+    {"name" : "adans_libas" , "base_url" : "https://www.adanslibas.com"},
+    {"name" : "iznik" , "base_url" : "https://iznikfashions.com"},
+    {"name" : "ammara_khan" , "base_url" : "https://www.ammarakhan.com"},
+    {"name" : "alizeh" , "base_url" : "https://alizeh.pk"},
+    {"name" : "vanya" , "base_url" : "https://vanya.pk/"},
+    {"name" : "so_kamal" , "base_url" : "https://sokamal.com"},
+    {"name" : "baroque" , "base_url" : "https://baroque.pk"},
+    {"name" : "rafia", "base_url" : "https://rafia.pk"},
+    {"name" : "motifz", "base_url" : "https://motifz.com.pk"},
+    {"name" : "anaya", "base_url" : "https://anayaonline.com"},
 ]
 
 print("total brands =" , len(brands))
@@ -86,10 +102,11 @@ def update_product_if_exists(product):
         # Update the existing product
         product["product_id"] = existing_product["product_id"]
         res = collection.update_one({'shopify_id': shopify_id}, {'$set': product})
+        print(f"matched = {res.matched_count} , modified = {res.modified_count} , acknowledged = {res.acknowledged}")
         if res.matched_count > 0 and res.modified_count > 0:
             return True  # Product was updated
         else:
-            return False  # Product was not updated or did not exist
+            return True  # Product was not updated or did not exist
     else:
         # Product does not exist, do nothing
         return False
@@ -195,7 +212,11 @@ def extract_fields(base_url , handle , json_data):
         available = variant["available"]
         if available == False : 
             continue 
-        
+
+        if price < 100 : 
+            price = 500
+            compare_price = 500
+
         if available == True : 
             this_distance = abs(1000 - price)
             if this_distance < distance : 
@@ -204,6 +225,8 @@ def extract_fields(base_url , handle , json_data):
                 compare_price_vt = compare_price
             product_available = True
         
+        
+
         variants.append({
             "id" : f"{variant["id"]}",
             "price" : variant["price"],
@@ -229,6 +252,11 @@ def extract_fields(base_url , handle , json_data):
     image_urls = []
     for image in images : 
         image_urls.append(image["src"])
+
+    if price < 100 : 
+        price = 500
+        compare_price = 500
+        compare_price_vt = 500
 
     discount = 0
     if compare_price_vt != -1 and compare_price_vt != 0 and price != 0: 

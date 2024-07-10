@@ -127,7 +127,7 @@ def extract_info(products):
                 return None
             print(f"response error = ") 
             pprint.pprint(e)
-            error = True
+            error = Truea
 
         if error == False or retries >= limit  : 
             break
