@@ -7,7 +7,9 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"time"
 	"regexp"
+	"strconv"
 	"strings"
 	"github.com/google/uuid"
 
@@ -36,10 +38,11 @@ type Product struct {
 	Discount      int      `bson:"discount"`
 	Currency      string   `bson:"currency"`
 	Variants      []Variant `bson:"variants"`
-	Options       []Option  `bson:"options"`
+	Options       []ShopifyOption  `bson:"options"`
 	Tags          []string  `bson:"tags"`
 	Available     bool     `bson:"available"`
 }
+
 
 type Variant struct {
 	ID            string `bson:"id"`
@@ -52,14 +55,65 @@ type Variant struct {
 	Option3       string `bson:"option3"`
 }
 
-type Option struct {
-	Name string `bson:"name"`
-	Values []string `bson:"values"`
-}
 
 type Brand struct {
 	Name    string `json:"name"`
 	BaseURL string `json:"base_url"`
+}
+
+
+type ShopifyProduct struct {
+	ID           int64     `json:"id" bson:"id"`
+	Title        string    `json:"title" bson:"title"`
+	Handle       string    `json:"handle" bson:"handle"`
+	BodyHTML     string    `json:"body_html" bson:"body_html"`
+	PublishedAt  time.Time `json:"published_at" bson:"published_at"`
+	CreatedAt    time.Time `json:"created_at" bson:"created_at"`
+	UpdatedAt    time.Time `json:"updated_at" bson:"updated_at"`
+	Vendor       string    `json:"vendor" bson:"vendor"`
+	ProductType  string    `json:"product_type" bson:"product_type"`
+	Tags         []string  `json:"tags" bson:"tags"`
+	Variants     []Variant `json:"variants" bson:"variants"`
+	Images       []ShopifyImage   `json:"images" bson:"images"`
+	Options      []ShopifyOption  `json:"options" bson:"options"`
+}
+
+type ShopifyVariant struct {
+	ID                int64     `json:"id" bson:"id"`
+	Title             string    `json:"title" bson:"title"`
+	Option1           string    `json:"option1" bson:"option1"`
+	Option2           string    `json:"option2" bson:"option2"`
+	Option3           string    `json:"option3" bson:"option3"`
+	SKU               string    `json:"sku" bson:"sku"`
+	RequiresShipping  bool      `json:"requires_shipping" bson:"requires_shipping"`
+	Taxable           bool      `json:"taxable" bson:"taxable"`
+	FeaturedImage     string    `json:"featured_image" bson:"featured_image"`
+	Available         bool      `json:"available" bson:"available"`
+	Price             string    `json:"price" bson:"price"`
+	Grams             int       `json:"grams" bson:"grams"`
+	CompareAtPrice    string    `json:"compare_at_price" bson:"compare_at_price"`
+	Position          int       `json:"position" bson:"position"`
+	ProductID         int64     `json:"product_id" bson:"product_id"`
+	CreatedAt         time.Time `json:"created_at" bson:"created_at"`
+	UpdatedAt         time.Time `json:"updated_at" bson:"updated_at"`
+}
+
+type ShopifyImage struct {
+	ID         int64     `json:"id" bson:"id"`
+	CreatedAt  time.Time `json:"created_at" bson:"created_at"`
+	Position   int       `json:"position" bson:"position"`
+	UpdatedAt  time.Time `json:"updated_at" bson:"updated_at"`
+	ProductID  int64     `json:"product_id" bson:"product_id"`
+	VariantIDs []int64   `json:"variant_ids" bson:"variant_ids"`
+	Src        string    `json:"src" bson:"src"`
+	Width      int       `json:"width" bson:"width"`
+	Height     int       `json:"height" bson:"height"`
+}
+
+type ShopifyOption struct {
+	Name     string   `json:"name" bson:"name"`
+	Position int      `json:"position" bson:"position"`
+	Values   []string `json:"values" bson:"values"`
 }
 
 var brands = []Brand{
@@ -162,8 +216,9 @@ func getPage(baseURL, url, handle string, page int, upload bool, collection *mon
 		log.Fatal(err)
 	}
 
-	var result map[string][]Product
+	var result map[string][]ShopifyProduct
 	json.Unmarshal(body, &result)
+
 
 	products := result["products"]
 	extractedProducts := []Product{}
@@ -177,15 +232,17 @@ func getPage(baseURL, url, handle string, page int, upload bool, collection *mon
 		}
 	}
 
+	log.Println("extracted products = " , extractedProducts)
+
 	return extractedProducts
 }
 
-func extractFields(baseURL, handle string, product Product) *Product {
-	if product.Description == "" {
+func extractFields(baseURL, handle string, product ShopifyProduct) *Product {
+	if product.BodyHTML == "" {
 		return nil
 	}
 
-	description := preprocessText(product.Description)
+	description := preprocessText(product.BodyHTML)
 
 	productAvailable := false
 	variantIndex := 0
@@ -225,7 +282,10 @@ func extractFields(baseURL, handle string, product Product) *Product {
 	}
 
 	imageURL := images[0]
-	imageURLs := images
+	imageURLs := []string{}
+	for _,  image := range images {
+		imageURLs = append(imageURLs, image.Src)
+	}
 
 	if price < 100 {
 		price = 500
@@ -243,17 +303,19 @@ func extractFields(baseURL, handle string, product Product) *Product {
 		}
 	}
 
+
+
 	newProduct := &Product{
 		ProductID:     uuid.New().String(),
 		ProductURL:    url,
-		ShopifyID:     product.ShopifyID,
+		ShopifyID:     strconv.Itoa(int(product.ID)),
 		Handle:        product.Handle,
 		Title:         strings.Title(strings.Replace(product.Title, "-", " ", -1)),
 		Vendor:        handle,
 		VendorTitle:   strings.Title(strings.Replace(handle, "_", " ", -1)),
 		Category:      "",
 		ProductType:   product.ProductType,
-		ImageURL:      imageURL,
+		ImageURL:      imageURL.Src,
 		Images:        imageURLs,
 		Description:   description,
 		Price:         price,

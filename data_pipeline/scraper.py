@@ -38,52 +38,14 @@ client = MongoClient(MONGO_URI)
 db = client[DATABASE_NAME]
 collection = db[COLLECTION_NAME]
 
-brands = [
-    {"name" : "afrozeh" , "base_url" : "https://www.afrozeh.com"},
-    {"name" : "ali_xeeshan" , "base_url" :  "https://alixeeshanempire.com"},
-    {"name" : "alkaram_studio" , "base_url" :  "https://www.alkaramstudio.com"},
-    {"name" : "asim_jofa" , "base_url" :  "https://asimjofa.com"},
-    {"name" : "beechtree" , "base_url" :  "https://beechtree.pk"},
-    {"name" : "bonanza_satrangi" , "base_url" :  "https://bonanzasatrangi.com"},
-    {"name" : "chinyere" , "base_url" :  "https://chinyere.pk"},
-    {"name" : "cross_stitch" , "base_url" :  "https://www.crossstitch.pk"},
-    {"name" : "edenrobe" , "base_url" :  "https://edenrobe.com"},
-    {"name" : "ethnic" , "base_url" :  "https://pk.ethnc.com"},
-    {"name" : "faiza_saqlain" , "base_url" :  "https://www.faizasaqlain.pk"},
-    {"name" : "generation" , "base_url" :  "https://generation.com.pk"},
-    {"name" : "hem_stitch" , "base_url" :  "https://www.hemstitch.pk"},
-    {"name" : "hussain_rehar" , "base_url" :  "https://www.hussainrehar.com"},
-    {"name" : "kanwal_malik" , "base_url" :  "https://www.kanwalmalik.com"},
-    {"name" : "kayseria" , "base_url" :  "https://www.kayseria.com"},
-    {"name" : "limelight" , "base_url" :  "https://www.limelight.pk"},
-    {"name" : "maria_b" , "base_url" :  "https://www.mariab.pk"},
-    {"name" : "mushq" , "base_url" :  "https://www.mushq.pk"},
-    {"name" : "nishat_linen" , "base_url" :  "https://nishatlinen.com"},
-    {"name" : "sadaf_fawad_khan" , "base_url" :  "https://sadaffawadkhan.com"},
-    {"name" : "sapphire" , "base_url" :  "https://pk.sapphireonline.pk"},
-    {"name" : "zaha" , "base_url" :  "https://www.zaha.pk"},
-    {"name" : "zara_shah_jahan" , "base_url" :  "https://zarashahjahan.com"},
-    {"name" : "zellbury" , "base_url" :  "https://zellbury.com"},
-    {"name" : "outfitters" , "base_url" : "https://outfitters.com.pk"},
-    {"name" : "breakout" , "base_url" : "https://breakout.com.pk"},
-    {"name" : "azure" , "base_url" : "https://www.azureofficial.pk"},
-    {"name" : "almirah" , "base_url" : "https://almirah.com.pk"},
-    {"name" : "saya" , "base_url" : "https://saya.pk"},
-    {"name" : "senorita" , "base_url" : "https://senorita.pk"},
-    {"name" : "zeen" , "base_url" : "https://zeenwoman.com"},
-    {"name" : "mahum_asad" , "base_url" : "https://mahumasad.com"},
-    {"name" : "mohagni" , "base_url" : "https://mohagni.com"},
-    {"name" : "adans_libas" , "base_url" : "https://www.adanslibas.com"},
-    {"name" : "iznik" , "base_url" : "https://iznikfashions.com"},
-    {"name" : "ammara_khan" , "base_url" : "https://www.ammarakhan.com"},
-    {"name" : "alizeh" , "base_url" : "https://alizeh.pk"},
-    {"name" : "vanya" , "base_url" : "https://vanya.pk/"},
-    {"name" : "so_kamal" , "base_url" : "https://sokamal.com"},
-    {"name" : "baroque" , "base_url" : "https://baroque.pk"},
-    {"name" : "rafia", "base_url" : "https://rafia.pk"},
-    {"name" : "motifz", "base_url" : "https://motifz.com.pk"},
-    {"name" : "anaya", "base_url" : "https://anayaonline.com"},
-]
+brandsColl = db["brands"]
+
+brands = []
+with open("./brands.json" , "r") as f : 
+    data = json.loads(f.read())
+    brands = data
+
+# brandsColl.insert_many(brands)
 
 print("total brands =" , len(brands))
 
@@ -101,12 +63,10 @@ def update_product_if_exists(product):
     if existing_product:
         # Update the existing product
         product["product_id"] = existing_product["product_id"]
-        res = collection.update_one({'shopify_id': shopify_id}, {'$set': product})
-        print(f"matched = {res.matched_count} , modified = {res.modified_count} , acknowledged = {res.acknowledged}")
-        if res.matched_count > 0 and res.modified_count > 0:
-            return True  # Product was updated
-        else:
-            return True  # Product was not updated or did not exist
+        collection.find_one_and_delete({'shopify_id' : shopify_id})
+        collection.insert_one(product)
+        print(f"updated product id = ${product["product_id"]}") 
+        return True
     else:
         # Product does not exist, do nothing
         return False

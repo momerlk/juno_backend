@@ -1,0 +1,331 @@
+[
+       {
+    "brand_id": "89e1907a-3733-4a3d-9862-0286c32d846f",
+    "name": "sowears",
+    "logo": "https://scontent.flhe5-1.fna.fbcdn.net/v/t39.30808-6/326377124_1107444226618410_4328220732261095089_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=m7RJ23XOMbkQ7kNvgGZ1lD_&_nc_ht=scontent.flhe5-1.fna&oh=00_AYAYLTcUBHU4d4bMYm-43uRunOvWItSIRwjKgdlHkzFfqg&oe=66968CA6",
+    "base_url": "https://sowears.net",
+    "description": "Sowears offers a curated selection of trendy and comfortable footwear for the modern woman. Their designs often feature playful details and are focused on both style and wearability."
+  },
+  {
+    "brand_id": "0185d1c8-6615-481a-927f-487523a38a89",
+    "name": "jazmin",
+    "logo": "https://jazmin.pk/cdn/shop/files/JAZMIN_LOGO_1.png?v=1656667563&width=1080",
+    "base_url": "https://jazmin.pk",
+    "description": "Jazmin is known for its fusion of contemporary aesthetics with traditional Pakistani craftsmanship. They offer a range of clothing and accessories that are both stylish and culturally rooted."
+  },
+  {
+    "brand_id": "4d9c1693-1658-430e-a075-5c324f954521",
+    "name": "agha_noor",
+    "logo": "https://nishatemporium.com/wp-content/uploads/2019/07/aghanoor.png",
+    "base_url": "https://aghanoorofficial.com",
+    "description": "Agha Noor embodies classic Pakistani elegance with its intricate embroideries, luxurious fabrics, and timeless designs. They cater to those seeking sophisticated and refined ensembles."
+  },
+  {
+    "brand_id": "d45c53d1-951a-42c8-8325-7e046d625f02",
+    "name": "afrozeh",
+    "logo": "https://scontent.flhe5-1.fna.fbcdn.net/v/t39.30808-6/326071856_1024010461912761_5665113073998307011_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=MBqe5kHChBYQ7kNvgHPkSVa&_nc_ht=scontent.flhe5-1.fna&oh=00_AYCQ87b5RAX7kJVHT29uX1sshkWvK9fAT-LirWSzgBmU3w&oe=66969C6C",
+    "base_url": "https://www.afrozeh.com",
+    "description": "Afrozeh captures the spirit of modern Pakistani fashion with its vibrant colors, trendy silhouettes, and fusion of Eastern and Western aesthetics. They offer a range of clothing for the fashion-forward individual."
+  },
+  {
+    "brand_id": "7c26c1e4-f84a-446b-a98d-08959c729645",
+    "name": "ali_xeeshan",
+    "logo": "https://scontent.flhe5-1.fna.fbcdn.net/v/t39.30808-6/348221445_272306831933364_1234088811183504390_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=MMVEhC-kBxsQ7kNvgGVpEBn&_nc_ht=scontent.flhe5-1.fna&oh=00_AYBdaM2_Ru0xhulSwhsJor-hb9kFRvl6970exZTLXMV0pA&oe=6696B46C",
+    "base_url": "https://alixeeshanempire.com",
+    "description": "Ali Xeeshan is synonymous with avant-garde designs and theatrical presentations. His collections often push boundaries and redefine traditional Pakistani fashion with bold and unconventional elements."
+  },
+  {
+    "brand_id": "a6d47e37-1299-4563-905b-486200151a7a",
+    "name": "alkaram_studio",
+    "logo": "https://scontent.flhe5-1.fna.fbcdn.net/v/t39.30808-6/437934131_830141839145191_8370341202581723909_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=sMP9AWbpX00Q7kNvgERaw7s&_nc_ht=scontent.flhe5-1.fna&oh=00_AYDf7EzlQj5zmLqcWjzlMC89H7iT6k7F6sw1wqJY4R5_ng&oe=66969E01",
+    "base_url": "https://www.alkaramstudio.com",
+    "description": "Alkaram Studio is a household name in Pakistan, offering a wide range of affordable and stylish clothing for the entire family. Their collections are known for their vibrant prints, comfortable silhouettes, and focus on everyday wear."
+  },
+  {
+    "brand_id": "b31e8481-0692-4212-b706-e5c1304c7a7c",
+    "name": "asim_jofa",
+    "logo": "https://scontent.flhe5-1.fna.fbcdn.net/v/t39.30808-6/279138632_117446897610722_9220769578694505293_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=ZaJkCR5pehMQ7kNvgH6HRRp&_nc_ht=scontent.flhe5-1.fna&oh=00_AYCEs9SryG8LC8NT8nD8R-LDfW6iLdrOwJCWQjQCaEPqzw&oe=66969889",
+    "base_url": "https://asimjofa.com",
+    "description": "Asim Jofa is renowned for its exquisite craftsmanship and luxurious designs. Their collections often feature intricate embroidery, embellishments, and a blend of classic and contemporary aesthetics, catering to those seeking a touch of opulence."
+  },
+  {
+    "brand_id": "3c2a7070-3136-4d8a-8247-195d335d9784",
+    "name": "beechtree",
+    "logo": "https://scontent.flhe5-1.fna.fbcdn.net/v/t39.30808-6/352744037_166899446355415_671427475527488146_n.png?_nc_cat=1&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=m6V8yDvFmE8Q7kNvgF9a642&_nc_ht=scontent.flhe5-1.fna&oh=00_AYBDTp6p3FU_B49h245ZLK2zfWLSXH-Y5-V14dUfBLgOWA&oe=66969708",
+    "base_url": "https://beechtree.pk",
+    "description": "Beechtree caters to the young and fashion-conscious with its trendy and affordable clothing and accessories. Their collections offer a mix of Eastern and Western wear, reflecting the evolving style of Pakistani youth."
+  },
+  {
+    "brand_id": "247029d1-1122-4c70-a30d-e9a38c440701",
+    "name": "bonanza_satrangi",
+    "logo": "https://asset.brandfetch.io/idMDTpn_3H/idNrfFaGMu.jpeg",
+    "base_url": "https://bonanzasatrangi.com",
+    "description": "Bonanza Satrangi is known for its vibrant and colorful designs that draw inspiration from Pakistani heritage and culture. They offer a diverse range of clothing for women and children, often featuring bold prints and traditional motifs." 
+  },
+  {
+    "brand_id": "e86a3242-6a94-4093-84c1-5c0269a244f9",
+    "name": "chinyere",
+    "logo": "https://nishatemporium.com/wp-content/uploads/2019/12/chinyere-1.png",
+    "base_url": "https://chinyere.pk",
+    "description": "Chinyere embodies chic and affordable style with its contemporary take on traditional Pakistani clothing. Their collections offer a range of casual and semi-formal wear, featuring clean lines, subtle embellishments, and a focus on comfortable silhouettes."
+  },
+  {
+    "brand_id": "938259d4-385c-4f8d-b385-8c8383a190f0",
+    "name": "cross_stitch",
+    "logo": "https://asset.brandfetch.io/idatu6Omew/idnbjC4C9B.jpeg",
+    "base_url": "https://www.crossstitch.pk",
+    "description": "Cross Stitch is a popular choice for those seeking a modern and sophisticated take on traditional Pakistani wear. Their collections feature intricate embroideries, minimalist designs, and a focus on using high-quality fabrics."
+  },
+  {
+    "brand_id": "097f5569-017c-4016-a24c-95191198473b",
+    "name": "edenrobe",
+    "logo": "https://scontent.flhe5-1.fna.fbcdn.net/v/t39.30808-6/348243706_1211968802849733_1561022057042224693_n.png?_nc_cat=1&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=hQSH53daP-AQ7kNvgHMdjq2&_nc_ht=scontent.flhe5-1.fna&oh=00_AYD26ljIoNsmIRdp0IWQmmh2IsOe1JfseEsVlyn0lW263w&oe=66969CFB",
+    "base_url": "https://edenrobe.com",
+    "description": "Edenrobe offers a diverse range of clothing for the entire family, blending contemporary trends with traditional aesthetics. They are known for their affordable prices, comfortable silhouettes, and focus on catering to a wide range of tastes."
+  },
+  {
+    "brand_id": "620e4043-3330-4821-a975-8a5c9523363f",
+    "name": "ethnic",
+    "logo": "https://scontent.flhe5-1.fna.fbcdn.net/v/t39.30808-6/437666327_839535454873963_7001819291976299029_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=H_ghXFwG-uIQ7kNvgFpM9ag&_nc_ht=scontent.flhe5-1.fna&oh=00_AYAnFic2PR_6YbSpXmofMOJfysvJ9mOyx37iZMJXF6KsoQ&oe=6696A6FA",
+    "base_url": "https://pk.ethnc.com",
+    "description": "Ethnic is a go-to brand for those seeking a fusion of Eastern and Western styles. Their collections offer a contemporary take on traditional Pakistani wear, featuring trendy silhouettes, comfortable fabrics, and a focus on creating versatile pieces."
+  },
+  {
+    "brand_id": "e63120a7-203f-4760-940d-069497294969",
+    "name": "faiza_saqlain",
+    "logo": "https://cdn.shopify.com/s/files/1/0262/2531/1795/files/326787488_718925156526857_1661085425081569774_n.jpg?v=1690437565",
+    "base_url": "https://www.faizasaqlain.pk",
+    "description": "Faiza Saqlain is celebrated for its exquisite use of traditional Pakistani embroidery techniques, particularly chikankari. Their collections exude elegance and sophistication, featuring intricate details and a focus on creating timeless pieces."
+  },
+  {
+    "brand_id": "58334049-9078-4c95-a82c-0c0083153835",
+    "name": "generation",
+    "logo": "https://scontent.flhe5-1.fna.fbcdn.net/v/t39.30808-6/348213435_147997828162103_4817516878088625499_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=pgGeKJcn92IQ7kNvgGTi3YL&_nc_ht=scontent.flhe5-1.fna&oh=00_AYDI6BJcw8_SeaGH-bCWih8RTjZiFFaV7ZzSqlqIsarc5g&oe=6696A5BB",
+    "base_url": "https://generation.com.pk",
+    "description": "Generation is a beloved Pakistani brand known for its unique blend of contemporary designs, comfortable silhouettes, and culturally inspired aesthetics. They offer a wide range of clothing for women of all ages, often featuring vibrant prints and traditional Pakistani textiles."
+  },
+  {
+    "brand_id": "6248c343-8d95-435f-9a42-008e598e9893",
+    "name": "hem_stitch",
+    "logo": "https://www.hemstitch.pk/cdn/shop/files/Logo_PNG_500x.png?v=1633091575",
+    "base_url": "https://www.hemstitch.pk",
+    "description": "Hem Stitch caters to the modern woman with its sophisticated and contemporary designs. They are known for their use of high-quality fabrics, flattering silhouettes, and attention to detail, offering a range of casual and formal wear."
+  },
+  {
+    "brand_id": "a516e941-9731-4c3b-94a7-2a87c411087d",
+    "name": "hussain_rehar",
+    "logo": "https://www.hussainrehar.com/cdn/shop/files/husainrehar_800x.png?v=1705903973",
+    "base_url": "https://www.hussainrehar.com",
+    "description": "Hussain Rehar is a leading name in Pakistani fashion, known for his bold and innovative designs that challenge conventional aesthetics. His collections are characterized by their use of unconventional materials, experimental silhouettes, and a focus on pushing creative boundaries."
+  },
+  {
+    "brand_id": "9c758434-148d-4380-b10a-800760441c1c",
+    "name": "kanwal_malik",
+    "logo": "https://scontent.flhe5-1.fna.fbcdn.net/v/t39.30808-6/313423782_450094443934070_1116208340247821223_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=oZcxNi8zPhIQ7kNvgHYqaug&_nc_ht=scontent.flhe5-1.fna&oh=00_AYB8DWPfR_KfdGv88qAb4cTfKsK0PhSGcvuXXmz2nt6TgA&oe=6696A0D4",
+    "base_url": "https://www.kanwalmalik.com",
+    "description": "Kanwal Malik embodies timeless elegance with its use of luxurious fabrics, intricate embroideries, and classic silhouettes. Their collections exude sophistication and are designed for those seeking a refined and polished aesthetic."
+  },
+  {
+    "brand_id": "9020389b-862a-4f2f-8367-2c557a88442b",
+    "name": "kayseria",
+    "logo": "https://scontent.flhe5-1.fna.fbcdn.net/v/t39.30808-6/311232067_10159479366386608_8756630731876226986_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=ty7eO9VEEE0Q7kNvgESYKZJ&_nc_ht=scontent.flhe5-1.fna&oh=00_AYC_mq57EoDzXdHIqIbV-lkqnwVvtp2FsTab8-9j9a-P1Q&oe=66969909",
+    "base_url": "https://www.kayseria.com",
+    "description": "Kayseria is a household name in Pakistan, known for its vibrant colors, traditional prints, and comfortable silhouettes. They offer a diverse range of clothing for women and children, reflecting the rich cultural heritage of Pakistan."
+  },
+  {
+    "brand_id": "73921730-6795-4177-b232-3170a379567c",
+    "name": "limelight",
+    "logo": "https://nishatemporium.com/wp-content/uploads/2019/06/limelight.png",
+    "base_url": "https://www.limelight.pk",
+    "description": "Limelight is a popular choice for trendy and affordable fashion. They are known for their fast-fashion approach, offering a wide variety of styles and frequent new arrivals to cater to the ever-evolving fashion desires of their customers."
+  },
+  {
+    "brand_id": "38c6d82b-1040-4e14-a830-0a0404610168",
+    "name": "maria_b",
+    "logo": "https://nishatemporium.com/wp-content/uploads/2019/07/mariab.png",
+    "base_url": "https://www.mariab.pk",
+    "description": "Maria B is a prominent name in Pakistani fashion, known for her signature blend of traditional aesthetics and contemporary designs. Her collections range from casual wear to bridal couture, often featuring intricate embroidery, luxurious fabrics, and a focus on celebrating Pakistani craftsmanship."
+  },
+  {
+    "brand_id": "52f97543-e300-4a69-849c-674895411a39",
+    "name": "mushq",
+    "logo": "https://scontent.flhe5-1.fna.fbcdn.net/v/t39.30808-6/326788639_1129639224340525_9160334556051790200_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Ra0K8nXIojsQ7kNvgHNpTJl&_nc_ht=scontent.flhe5-1.fna&oh=00_AYCsoHhsTs1Bf4amDnwtw3pAXMc4MYob_cg9Gvc7J_YjZQ&oe=66969D3A",
+    "base_url": "https://www.mushq.pk",
+    "description": "Mushq celebrates traditional Pakistani crafts with its contemporary and stylish clothing. Their collections often feature block prints, hand embroidery, and other artisanal techniques, adding a touch of heritage and uniqueness to their designs."
+  },
+  {
+    "brand_id": "f86053e2-0462-498d-9720-b3e393483286",
+    "name": "nishat_linen",
+    "logo": "https://blis.com/wp-content/uploads/2022/08/Nishat-Linen-logo.png",
+    "base_url": "https://nishatlinen.com",
+    "description": "Nishat Linen is one of Pakistan's oldest and most trusted textile brands, renowned for its high-quality fabrics, classic designs, and affordable prices. They offer a wide range of clothing for men, women, and children, catering to those seeking comfort and style."
+  },
+  {
+    "brand_id": "96775131-4201-4915-883a-952958469795",
+    "name": "sadaf_fawad_khan",
+    "logo": "https://scontent.flhe5-1.fna.fbcdn.net/v/t39.30808-6/424914679_122093600456223034_3486961985066817372_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=6F9HQQTIILAQ7kNvgGTbiKC&_nc_ht=scontent.flhe5-1.fna&oh=00_AYDkFD7RCaQpLEFDxT7eYAwLIID7tY4LuNepj1asw9aQ3g&oe=66969218",
+    "base_url": "https://sadaffawadkhan.com",
+    "description": "Sadaf Fawad Khan embodies understated elegance and refined minimalism. Her collections are known for their use of luxurious fabrics, clean lines, and subtle embellishments, catering to the sophisticated and modern woman."
+  },
+  {
+    "brand_id": "4898245f-3210-4c39-b197-542878769020",
+    "name": "sapphire",
+    "logo": "https://asset.brandfetch.io/idyznvKNzL/idqWUgJMU_.jpeg",
+    "base_url": "https://pk.sapphireonline.pk",
+    "description": "Sapphire is a widely recognized brand in Pakistan, offering a diverse range of clothing for men, women, and children. They are known for their trendy designs, affordable prices, and extensive network of stores across the country."
+  },
+  {
+    "brand_id": "2626510d-8414-411f-a744-00595f83553c",
+    "name": "zaha",
+    "logo": "https://images.squarespace-cdn.com/content/v1/59ca6394197aeaecf47648c1/1508943278664-9XRHU3ANB9J3C732B9T5/Zaha_Logo_viel_Fleisch.jpg",
+    "base_url": "https://www.zaha.pk",
+    "description": "Zaha is celebrated for its exquisite use of traditional Pakistani craftsmanship, particularly its intricate embroidery and handwoven textiles. Their collections are a beautiful blend of contemporary aesthetics and timeless techniques, creating unique and culturally rich pieces."
+  },
+  {
+    "brand_id": "d033e792-813a-4342-b831-720914454973",
+    "name": "zara_shah_jahan",
+    "logo": "https://scontent.flhe5-1.fna.fbcdn.net/v/t1.6435-9/122767860_207677017386710_7011379076095301460_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=pYoIbysCrfwQ7kNvgE4GZ7q&_nc_ht=scontent.flhe5-1.fna&oh=00_AYASzSNmv49_5RlxojKRJEcKxXXaptxnIzW0Oa42egLOnA&oe=66B835D2",
+    "base_url": "https://zarashahjahan.com",
+    "description": "Zara Shahjahan embodies contemporary elegance with its sophisticated designs and minimalist aesthetics. Their collections are known for their clean lines, subtle embellishments, and focus on creating versatile pieces that can be dressed up or down."
+  },
+  {
+    "brand_id": "75c53892-1118-4623-97c8-10250329018f",
+    "name": "zellbury",
+    "logo": "https://scontent.flhe5-1.fna.fbcdn.net/v/t39.30808-6/258874501_4323060997816952_4626176026731130825_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=myr71NAqmMYQ7kNvgGNkh8C&_nc_ht=scontent.flhe5-1.fna&oh=00_AYDkfbiRJ87ADIFnW2aST795yDVTyNuh7eQKEY7NFzNgyg&oe=6696B37A",
+    "base_url": "https://zellbury.com",
+    "description": "Zellbury offers a blend of contemporary and classic styles at affordable prices. Their collections feature a mix of Eastern and Western wear, catering to a wide range of tastes and preferences."
+  },
+  {
+    "brand_id": "8d66489d-9624-4976-a9d3-9c36640548b2",
+    "name": "outfitters",
+    "logo": "https://vectorseek.com/wp-content/uploads/2023/04/Outfitters-Logo-Vector.jpg",
+    "base_url": "https://outfitters.com.pk",
+    "description": "Outfitters targets a younger demographic with its trendy and affordable casual wear. They are known for their denim, t-shirts, and streetwear-inspired designs, catering to the fashion needs of the younger generation."
+  },
+  {
+    "brand_id": "d98f6848-2325-453a-8915-8157645034a2",
+    "name": "breakout",
+    "logo": "https://scontent.flhe5-1.fna.fbcdn.net/v/t1.6435-9/86217219_2877374138991308_4445133706448863232_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=0327a3&_nc_ohc=UP4s3A4kw4EQ7kNvgE0guKa&_nc_ht=scontent.flhe5-1.fna&oh=00_AYA-ZMBGUAT-HIAvLVZhmRsydIkvr-OuClt9Fzoq_HWUgA&oe=66B83735",
+    "base_url": "https://breakout.com.pk",
+    "description": "Breakout is a popular choice for casual wear, offering a wide selection of trendy and affordable clothing for men and women. They are known for their focus on denim, graphic tees, and accessories, catering to a youthful and fashion-forward audience."
+  },
+  {
+    "brand_id": "e7c72887-3671-486b-8077-24223469506f",
+    "name": "azure",
+    "logo": "https://scontent.flhe5-1.fna.fbcdn.net/v/t39.30808-6/327023170_638768584667662_8737872965639920392_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=8IYkuBpW4-gQ7kNvgEkmB4L&_nc_ht=scontent.flhe5-1.fna&oh=00_AYBd_9qyNM-EbYeb6et81boTDZVDJn-EL3oxFiu-5DZynA&oe=6696AB53",
+    "base_url": "https://www.azureofficial.pk",
+    "description": "Azure offers a blend of Eastern and Western wear, catering to the modern Pakistani woman. Their collections feature trendy designs, comfortable silhouettes, and a focus on creating versatile pieces that can be styled for various occasions."
+  },
+  {
+    "brand_id": "e252810c-6574-4166-a98b-70003993119b",
+    "name": "almirah",
+    "logo": "https://dolmenmalls.com/wp-content/uploads/2015/12/almirah.png",
+    "base_url": "https://almirah.com.pk",
+    "description": "Almirah is known for its trendy and affordable clothing, particularly its Western wear and fusion pieces. They cater to fashion-conscious women who want to stay updated with the latest trends without breaking the bank."
+  },
+  {
+    "brand_id": "9d183341-931c-4657-862d-73438141657b",
+    "name": "saya",
+    "logo": "https://hyderi.dolmenmalls.com/wp-content/uploads/2022/04/Saya.png",
+    "base_url": "https://saya.pk",
+    "description": "Saya offers a range of clothing for women, from casual wear to formal wear, with a focus on comfort, style, and affordability. Their collections are designed to cater to the diverse needs of the modern Pakistani woman."
+  },
+  {
+    "brand_id": "0263479a-3723-4c13-8115-a95689727530",
+    "name": "senorita",
+    "logo": "https://scontent.flhe5-1.fna.fbcdn.net/v/t39.30808-6/302521783_373843148283324_3814242634738639544_n.png?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=_SwSZS_p93EQ7kNvgHuhZQP&_nc_ht=scontent.flhe5-1.fna&oh=00_AYBASi1xpxzXFtF1Z3lgmnPsEVKfHE2GnmjWREA9DU1bzg&oe=66968F21",
+    "base_url": "https://senorita.pk",
+    "description": "Senorita is a popular choice for stylish and affordable footwear and accessories. They cater to young women who want to add a touch of trendiness to their look without compromising on comfort."
+  },
+  {
+    "brand_id": "0c731189-4329-479d-b583-42586526335c",
+    "name": "zeen",
+    "logo": "https://zeenwoman.com/cdn/shop/files/logo-01_d4f8f475-b04b-4d95-9ac1-0bc349fe14eb.png?v=1605592172",
+    "base_url": "https://zeenwoman.com",
+    "description": "Zeen offers a mix of Eastern and Western wear for women, with a focus on contemporary designs, comfortable fabrics, and accessible prices. Their collections cater to the modern Pakistani woman who wants to express her individual style."
+  },
+  {
+    "brand_id": "30364829-792a-493d-b186-42a14637527c",
+    "name": "mahum_asad",
+    "logo": "https://scontent.flhe5-1.fna.fbcdn.net/v/t39.30808-1/325502269_1338634540324198_3705262884356591712_n.png?stp=dst-png_p720x720&_nc_cat=107&ccb=1-7&_nc_sid=f4b9fd&_nc_ohc=ZlBsuD13E_AQ7kNvgGl7ar8&_nc_ht=scontent.flhe5-1.fna&oh=00_AYBxHLzGsqwbEv_wK3r8gN8MJukQcLBj1yuf-YleYBVAJQ&oe=6696B7A1",
+    "base_url": "https://mahumasad.com",
+    "description": "Mahum Asad is known for her feminine and elegant designs, often featuring intricate embellishments, flowing silhouettes, and a focus on formal wear. Her collections are perfect for special occasions and exude a sense of grace and sophistication."
+  },
+  {
+    "brand_id": "e4682590-404f-4689-a441-833388275209",
+    "name": "mohagni",
+    "logo": "https://cdn.ecommercedns.uk/files/8/216208/2/7781652/75388240-2532106790407019-4880978775669473280-o.jpg",
+    "base_url": "https://mohagni.com",
+    "description": "Mohagni offers a range of footwear and accessories for men and women, with a focus on style, quality, and affordability. Their collections cater to those who want to elevate their everyday look with trendy and durable pieces."
+  },
+  {
+    "brand_id": "23a9922d-2899-4a66-9556-371287977526",
+    "name": "adans_libas",
+    "logo": "https://scontent.flhe5-1.fna.fbcdn.net/v/t39.30808-6/327437991_1272060460010909_7686309830692527209_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=WxbDJhCRovgQ7kNvgFtmC0p&_nc_ht=scontent.flhe5-1.fna&oh=00_AYCM6_13jyTFQ4ABoRs9wvi9iyq1uaNKvkXOu5-KLQEhEQ&oe=669690D9",
+    "base_url": "https://www.adanslibas.com",
+    "description": "Adan's Libas caters to women seeking modest clothing options, with a focus on comfortable fabrics, loose silhouettes, and elegant designs. Their collections provide a blend of style and modesty, catering to a specific niche within Pakistani fashion."
+  },
+  {
+    "brand_id": "d244875a-7985-4328-9486-336437845065",
+    "name": "iznik",
+    "logo": "https://scontent.flhe5-1.fna.fbcdn.net/v/t39.30808-6/440058898_890338962897293_7053011532375301212_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=4k0WYMJG51IQ7kNvgGI6sqT&_nc_ht=scontent.flhe5-1.fna&oh=00_AYAp-NjpRSczDFAVcCrCAR5g1Ms0IQ1ALLfJFf2XHkYFMQ&oe=6696934A",
+    "base_url": "https://iznikfashions.com",
+    "description": "Iznik offers a contemporary take on traditional Pakistani clothing, featuring block prints, hand-loom fabrics, and a focus on comfortable silhouettes. Their collections are a blend of classic and modern, appealing to those seeking a touch of tradition with a contemporary twist."
+  },
+  {
+    "brand_id": "0657721a-7839-4976-8607-572720575512",
+    "name": "ammara_khan",
+    "logo": "https://scontent.flhe5-1.fna.fbcdn.net/v/t39.30808-6/449258464_795679846043285_3462772267705110423_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=9KRoYExkpgwQ7kNvgEAPQz7&_nc_ht=scontent.flhe5-1.fna&oh=00_AYDY2fKNBJqQjPfc-60RYyM3TEM2xpQfrbHyHoA7gHQugQ&oe=6696B5C2",
+    "base_url": "https://www.ammarakhan.com",
+    "description": "Ammara Khan is known for her sophisticated and glamorous designs, often featuring intricate embellishments, luxurious fabrics, and a focus on formal wear and bridal couture. Her collections are characterized by their attention to detail and exquisite craftsmanship."
+  },
+  {
+    "brand_id": "29521229-2345-4237-b737-897651127667",
+    "name": "alizeh",
+    "logo": "https://scontent.flhe5-1.fna.fbcdn.net/v/t39.30808-6/309426702_468391335307136_3092405163790329406_n.png?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=grV7vWMtTeIQ7kNvgFCSGZ2&_nc_ht=scontent.flhe5-1.fna&oh=00_AYA2WbdIPPr2rf2rymEep6QGf6foJOWTxpQFLagXfzwFUA&oe=6696BB95",
+    "base_url": "https://alizeh.pk",
+    "description": "Alizah offers a range of clothing for women, from casual wear to formal wear, with a focus on comfortable fabrics, trendy designs, and affordable prices. Their collections are designed to appeal to a wide range of tastes and budgets."
+  },
+  {
+    "brand_id": "f261242a-8324-4657-8148-270237867771",
+    "name": "vanya",
+    "logo": "https://scontent.flhe5-1.fna.fbcdn.net/v/t39.30808-1/309987048_467173945429215_1005943210695192607_n.png?_nc_cat=106&ccb=1-7&_nc_sid=f4b9fd&_nc_ohc=YStZ84pQV0oQ7kNvgHS5kyU&_nc_ht=scontent.flhe5-1.fna&oh=00_AYBGdL-eFeWhxnScwnD4zdvT-MXB0yU4bsV_T4eGnc4t0w&oe=66969AA8",
+    "base_url": "https://vanya.pk/",
+    "description": "Vanya caters to women seeking stylish and comfortable footwear options, with a focus on trendy designs and affordable prices. They offer a wide variety of shoes for every occasion, ensuring both style and comfort."
+  },
+  {
+    "brand_id": "5462301a-0126-4477-a522-915869387932",
+    "name": "so_kamal",
+    "logo": "https://www.sokamal.com/cdn/shop/files/253190845_4528201807215004_6487693661099292697_n_1.jpg?v=1702292873",
+    "base_url": "https://sokamal.com",
+    "description": "So Kamal is a well-known brand offering a wide range of clothing for women, men, and children. They are known for their comfortable fabrics, trendy designs, and affordable prices, making them a popular choice for families."
+  },
+  {
+    "brand_id": "98549420-1248-4429-8102-109385387435",
+    "name": "baroque",
+    "logo": "https://www.facebook.com/photo/?fbid=695033422660948&set=a.631095612388063",
+    "base_url": "https://baroque.pk",
+    "description": "Baroque is known for its elegant and sophisticated designs, often featuring intricate embroidery, luxurious fabrics, and a focus on formal wear. Their collections are perfect for special occasions and exude a timeless charm."
+  },
+  {
+    "brand_id": "70398541-7420-4671-a358-600329374859",
+    "name": "rafia",
+    "logo": "https://scontent.flhe5-1.fna.fbcdn.net/v/t39.30808-6/341003807_541354281496598_5207311354930737835_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=SMKvQ1tQuTkQ7kNvgG-Oorv&_nc_ht=scontent.flhe5-1.fna&oh=00_AYAfJRd0FnD6z_u3vDvyXGqAK3tCEBRrS18Ui4NiSBmfIg&oe=6696B571",
+    "base_url": "https://www.rafia.pk",
+    "description": "Rafia offers a range of clothing for women, from casual wear to formal wear, with a focus on comfortable fabrics, trendy designs, and affordable prices. Their collections are designed to cater to the evolving fashion needs of the modern Pakistani woman."
+  },
+  {
+    "brand_id": "66158721-8375-4430-a222-186748287456",
+    "name": "motifz",
+    "logo": "https://play-lh.googleusercontent.com/3W1mclV7OoAZ2YlHFmdyTB56x3N-kxMA78LmJqc_JfDTEkPwqwNQqntSY9C0XSMcLQ",
+    "base_url": "https://motifz.com.pk",
+    "description": "Motifz is known for its vibrant and colorful collections, often featuring traditional embroidery, bold prints, and comfortable silhouettes. They offer a range of clothing for women, from casual wear to formal wear, reflecting the rich cultural heritage of Pakistan."
+  },
+  {
+    "brand_id": "45781230-9365-4728-a344-023948561287",
+    "name": "anaya",
+    "logo": "https://images-platform.99static.com/sJCdlRmyovxroU6jSG2VhjaFVTw=/500x500/top/smart/99designs-contests-attachments/22/22413/attachment_22413685",
+    "base_url": "https://anayaonline.com",
+    "description": "Anaya offers a mix of Eastern and Western wear for women, with a focus on contemporary designs, comfortable fabrics, and accessible prices. Their collections are designed to appeal to a wide range of tastes and provide stylish options for various occasions."
+  }
+]
