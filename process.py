@@ -207,7 +207,13 @@ for item in data:
 
 print("calculated features")
 
-user_ratings = {"742b2a0d-fa45-4e47-97ba-249b6e8e2839": 0.1, "b06c0d15-1127-4d7e-9435-46f240f68011": 0.1, "25f3fe1e-e63f-45cc-a90b-01a35146f57b": 0.8}
+def get_user_ratings(user_id : str):
+    ratings = {}
+    for action in  db["actions"].find({"user_id" : user_id , "action_type" : "like"}) :
+        ratings[action["product_id"]] = 0.5
+    return ratings
+
+user_ratings = get_user_ratings("5ae17906-2adb-455a-8297-abeda08a7eed")
 user_profile = create_preference_profile(features_obj, user_ratings)
 
 items_data2 = []
@@ -223,6 +229,6 @@ for item in collection.find({}):
     items_data2.append(item)
 
 # Get top 3 recommendations
-recommendations = recommend(items_data2, features_obj, user_profile, 3)
+recommendations = recommend(items_data2, features_obj, user_profile, 5)
 for rec in recommendations : 
-    print(rec["title"], rec["vendor"])
+    print(rec["product_id"], rec["title"], rec["vendor"])
